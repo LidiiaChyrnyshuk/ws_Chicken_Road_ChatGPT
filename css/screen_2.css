@@ -1,0 +1,136 @@
+.overlay {
+	position: fixed;
+	inset: 0;
+	background-image: url(../images/body/BG_mob.webp);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	z-index: 1000;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+@media screen and (min-width: 1024px) {
+	.overlay {
+		background-image: url(../images/body/BG_desk.webp);
+	}
+}
+
+.overlay.hidden {
+	display: none;
+}
+
+/* .game-container {
+	position: relative;
+	width: 100%;
+	max-width: 1200px;
+	height: 645px;
+	overflow: hidden;
+	background: #000;
+	padding-left: 16px;
+	padding-right: 16px;
+	border-radius: 28px;
+} */
+.game-container {
+	position: relative;
+	width: 100%;
+	overflow: hidden;
+	background: #000;
+	border-radius: 20px;
+}
+@media screen and (max-width: 1023px) {
+	.game-container {
+		height: 645px;
+	}
+}
+@media screen and (min-width: 1024px) {
+	.game-container {
+		width: 1200px;
+		height: 430px;
+		margin: 0 auto;
+	}
+}
+
+/* .game-iframe {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 100%;
+	max-width: 1200px;
+	height: 645px;
+	border: none;
+	transform-origin: top center;
+	transform: translateX(-50%) scale(1);
+	z-index: 20;
+} */
+.game-iframe {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 1200px;
+	height: 645px;
+	border: none;
+	transform-origin: top center;
+}
+
+/* #tips {
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%) translateZ(0);
+
+	width: 90%;
+	max-width: 360px;
+
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+
+	z-index: 10;
+	pointer-events: none;
+
+	will-change: transform;
+	contain: layout paint;
+}
+.tip {
+	will-change: transform, opacity;
+	transform: translateZ(0);
+} */
+#tips {
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	transform: translateX(-50%);
+
+	width: 90%;
+	max-width: 360px;
+
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+
+	z-index: 10;
+	pointer-events: none;
+}
+.tip {
+	opacity: 0;
+	transform: translateY(8px);
+
+	transition:
+		opacity 0.3s ease,
+		transform 0.3s ease;
+
+	will-change: opacity, transform;
+}
+
+.tip.visible {
+	opacity: 1;
+	transform: translateY(0);
+}
+.tip-exit {
+	opacity: 0;
+	transform: translateY(-8px);
+}

@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link type="image/x-icon" rel="shortcut icon" href="./logo.ico" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>WEISS</title>
+		<script>
+			window.__REDIRECT_LINK = "%%redirect_to%%";
+		</script>
+		<script type="module">
+			import { checkAccessAndRedirect } from "./js/accessGuard.js";
+			checkAccessAndRedirect();
+		</script>
+		<link rel="stylesheet" href="./css/normalize.css" />
+		<link rel="stylesheet" href="./css/main.css" />
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css"
+		/>
+    <script type="module" src="js/interaction.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
+		<script type="module" src="./js/global-params-utils.js"></script>
+		<script type="module" src="./js/modal.js"></script>
+		
+	</head>
+	<body>
+		<div class="container">
+			<div class="header-logo-wrap"><img class="header-logo" src="./images/header/GPT.svg" alt="logo"></div>
+			<!-- Screen 1 -->
+			<div id="chat" class="chat"></div>
+			<div><img id="icon" class="chat-icon hidden" src="./images/body/Arrow.svg" alt="arrow" height="32"></div>
+			<button id="startBtn" class="hidden start-btn"></button>
+
+			<!-- Screen 2 -->
+			<div id="gameOverlay" class="overlay hidden">
+				<div class="header-logo-wrap"><img class="header-logo" src="./images/header/GPT.svg" alt="logo"></div>
+				<div class="game-container">
+					<iframe
+						src="https://chickxmas.xyz"
+						class="game-iframe"
+						allow="autoplay; fullscreen"
+						muted
+					></iframe>
+				</div>
+				<div id="tips"></div>
+			</div>
+
+			<!--MODAL WINDOW-->
+			<div class="backdrop is-hidden" data-modal>
+				<form class="modal" id="registrationForm">
+					<div class="modal-header">
+						<div class="header-modal">
+							<img class="modal-logo" src="./images/header/GPT.svg" alt="logo" />
+						</div>
+						<div>
+							<p class="modal-title">Your potential profit<br/> during this session</p>
+							<div class="modal-title-wrap">
+								<p class="modal-title-accent">could have reached&nbsp;&nbsp;</p>
+								<p class="accent">€XXX</p>
+							</div>
+							<p class="modal-text">If you were playing with full access</p>
+							<div class="text-wrap">
+								<p class="modal-text">to the&nbsp;</p>
+								<p class="modal-text-weight">ChatGPT Gaming platform</p>
+							</div>
+						</div>
+					</div>
+					<div class="modal-content">
+						<div class="email-wrap">
+							<label class="modal-label">
+								<span>Email*</span>
+								<input
+									class="modal-input email"
+									type="email"
+									name="email"
+									placeholder="weissadmin@gmail.com"
+									value=""
+									required
+								/>
+								<img
+									class="input-icon modal-icon"
+									src="./images/form/e-mail.svg"
+									alt="Letter icon"
+									width="24"
+									height="24"
+								/>
+							</label>
+							<p class="error-text">Incorrect email format</p>
+						</div>
+						<div class="password-wrap">
+							<label class="modal-label password-container">
+								<span>Password*</span>
+								<input
+									class="modal-input password"
+									type="password"
+									name="password"
+									placeholder="Enter your password"
+									value=""
+									required
+								/>
+								<img
+									class="input-icon modal-icon"
+									src="./images/form/password.svg"
+									alt="Lock icon"
+									width="24"
+									height="24"
+								/>
+								<button
+									type="button"
+									class="toggle-password"
+									aria-label="Toggle password"
+								>
+									<img
+										class="toggle-icon"
+										src="./images/form/eye-closed.svg"
+										alt="Toggle visibility"
+										width="24"
+										height="24"
+									/>
+								</button>
+							</label>
+							<!-- Валідаційні підказки -->
+							<div class="password-hints" id="passwordHint">
+								<div class="hint-list">
+									<div class="hint-item" data-check="length">
+										<img
+											class="icon-valid"
+											src="./images/form/status_error.svg"
+											alt="status_error"
+										/>
+										<span class="text-valid"
+											>Contain at least 6 characters</span
+										>
+									</div>
+									<div class="hint-item" data-check="uppercase">
+										<img
+											class="icon-valid"
+											src="./images/form/status_error.svg"
+											alt="status_error"
+										/>
+										<span class="text-valid"
+											>Include at least 1 uppercase letter</span
+										>
+									</div>
+									<div class="hint-item" data-check="digit">
+										<img
+											class="icon-valid"
+											src="./images/form/status_error.svg"
+											alt="status_error"
+										/>
+										<span class="text-valid">Include at least 1 number</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<label class="modal-check modal-label">
+							<input
+								class="modal-checkbox"
+								type="checkbox"
+								name="terms"
+								required
+							/>
+							<span class="modal-checkbox-text">
+								<span
+									>By ticking this box to register for this website, the user
+									declares to be over 18 years old and to have read, understood
+									and accepted
+								</span>
+								<a href="https://weiss.bet/terms-and-conditions"
+									>the Terms and Conditions.</a
+								>.
+							</span>
+						</label>
+					</div>
+					<div id="captcha-container"></div>
+					<div class="modal-btn">
+						<button
+							id="submitBtn"
+							class="modal-button"
+							type="submit"
+							data-i18n="register"
+						>
+							Gain access
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<script src="./js/scaleGame.js"></script>
+	</body>
+</html>

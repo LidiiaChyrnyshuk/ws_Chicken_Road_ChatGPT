@@ -1,0 +1,7 @@
+:root {
+	--color-bg: #212121;
+	--color-text: #ffffff;
+	--color-bg-btn: linear-gradient(216.03deg, #6ff88c -9.72%, #15c94b 58.39%);
+	--color-accent-text: #ffa310;
+	--color-modal-text-accent: #1cf25c;
+}
