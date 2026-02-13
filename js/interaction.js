@@ -110,7 +110,7 @@ startBtn.addEventListener("click", () => {
 
 	setTimeout(() => {
 		scaleGame();
-	}, 50);
+	}, 60);
 
 	let tipIndex = 0;
 

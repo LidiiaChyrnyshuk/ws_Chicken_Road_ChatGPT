@@ -1,8 +1,8 @@
 .start-btn {
-	width: /* 358px */91.79vw;
-	height: /* 56px */14.35vw;
+	width: 358px/* 91.79vw */;
+	height: 56px/* 14.35vw */;
 	border: 1px solid rgba(255, 255, 255, 0.8);
-	border-radius: /* 48px */12.30vw;
+	border-radius: 48px/* 12.30vw */;
 	padding-top: 8px;
 	padding-right: 48px;
 	padding-bottom: 8px;
@@ -10,7 +10,7 @@
 	background: var(--color-bg-btn);
 	font-weight: 700;
 	font-style: Bold;
-	font-size: /* 30px */7.69vw;
+	font-size: 30px/* 7.69vw */;
 	line-height: 20px;
 	letter-spacing: 3px;
 	color: var(--color-text);

@@ -74,6 +74,7 @@ body {
 	width: /* 231px */59.23vw;
 	max-width: 322px;
 	height: /* 46px */11.79vw;
+	max-height: 64px;
 }
 /* @media screen and (min-width: 1024px) {
 	.header-logo {

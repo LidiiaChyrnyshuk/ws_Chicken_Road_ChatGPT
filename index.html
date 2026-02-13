@@ -39,11 +39,11 @@
 					<iframe
 						src="https://chickxmas.xyz"
 						class="game-iframe"
-						allow="autoplay; fullscreen"
+						allow="autoplay; microphone"
 						muted
 					></iframe>
 				</div>
-				<div id="tips"></div>
+				<div class="tips" id="tips"></div>
 			</div>
 
 			<!--MODAL WINDOW-->
@@ -51,7 +51,7 @@
 				<form class="modal" id="registrationForm">
 					<div class="modal-header">
 						<div class="header-modal">
-							<img class="modal-logo" src="./images/header/GPT.svg" alt="logo" />
+							<div class="modal-logo"></div>
 						</div>
 						<div>
 							<p class="modal-title">Your potential profit<br/> during this session</p>
@@ -80,7 +80,7 @@
 								/>
 								<img
 									class="input-icon modal-icon"
-									src="./images/form/e-mail.svg"
+									src="./images/form/email.svg"
 									alt="Letter icon"
 									width="24"
 									height="24"
@@ -101,7 +101,7 @@
 								/>
 								<img
 									class="input-icon modal-icon"
-									src="./images/form/password.svg"
+									src="./images/form/lock.svg"
 									alt="Lock icon"
 									width="24"
 									height="24"
@@ -174,7 +174,7 @@
 						</label>
 					</div>
 					<div id="captcha-container"></div>
-					<div class="modal-btn">
+					<div class="modal-btn-wrap">
 						<button
 							id="submitBtn"
 							class="modal-button"
@@ -183,6 +183,10 @@
 						>
 							Gain access
 						</button>
+					</div>
+					<div class="modal-footer">
+						<div class="modal-footer-title">Chat GPT Gaming can make mistakes.</div>
+					<div class="modal-footer-text">Check important info. See Cookie Preferences.</div>
 					</div>
 				</form>
 			</div>
