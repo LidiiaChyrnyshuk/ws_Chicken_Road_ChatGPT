@@ -1,1 +1,52 @@
+.accent-coins {
+  width: 115%;
+}
+.top-left-mob {
+	position: absolute;
+	top: 20px;
+	left: -20px;
+	width: 113px;
+	height: 106px;
+}
 
+.centr-left-mob {
+	position: absolute;
+	top: 173px;
+	left: -13px;
+	width: 84px;
+	height: 68px;
+}
+
+.centr-right-mob {
+	position: absolute;
+	top: 517px;
+	right: -13px;
+	width: 132px;
+	height: 122px;
+}
+
+.bottom-right-mob {
+	position: absolute;
+	top: 640px;
+	right: 60px;
+	width: 71px;
+	height: 86px;
+}
+
+@media screen and (min-width: 1024px) {
+	.top-left-mob {
+		display: none;
+	}
+
+	.centr-left-mob {
+		display: none;
+	}
+
+	.centr-right-mob {
+		display: none;
+	}
+
+	.bottom-right-mob {
+		display: none;
+	}
+}
