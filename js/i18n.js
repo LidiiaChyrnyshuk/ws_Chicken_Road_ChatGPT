@@ -15,6 +15,13 @@ const i18n = {
 			"If you increase the bet slightly on the next round, the payout curve becomes more favorable…",
 		],
 		register: "Gain access",
+		modalTitle: "Your potential profit during this session",
+		modalTitleAccent: "could have reached",
+		modalText: "If you were playing with full access",
+		modalTextSmall: "to the",
+		modalTextWeight: "ChatGPT Gaming platform",
+		footerTitle: "Chat GPT Gaming can make mistakes.",
+		footerText: "Check important info. See Cookie Preferences.",
 	},
 	fr: {
 		chat: [
@@ -29,8 +36,15 @@ const i18n = {
 			"Astuce: Des mises moyennes après 2-3 résultats bas offrent généralement le meilleur rapport risque-récompense.",
 			"Si tu augmentes légèrement la mise au prochain tour, la courbe de gains devient plus favorable…",
 		],
-		
+
 		register: "Obtenir l'accès",
+		modalTitle: "Ton profit potentiel durant cette session",
+		modalTitleAccent: "aurait pu atteindre",
+		modalText: "si tu jouais avec un accès complet à la ",
+		modalTextSmall: "plateforme",
+		modalTextWeight: "ChatGPT Gaming",
+		footerTitle: "ChatGPT Gaming peut se tromper.",
+		footerText: "Vérifie les informations importantes. Voir les Préférences de cookies.",
 	},
 };
 

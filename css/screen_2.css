@@ -62,7 +62,8 @@
 @media screen and (min-width: 1024px) {
 	.game-iframe {
 		width: 1200px;
-		height: 430px;
+		height: auto;
+		min-height: 430px;
 	}
 }
 

@@ -55,7 +55,6 @@
 		max-width: 480px;
 		max-height: 598px;
 		border-radius: 32px;
-		
 	}
 }
 
@@ -125,6 +124,7 @@
 	font-size: 18px;
 	line-height: 22px;
 	text-transform: uppercase;
+	width: 288px;
 }
 @media screen and (min-width: 1024px) {
 	.modal-title {
@@ -136,6 +136,7 @@
 .modal-title-wrap {
 	display: flex;
 	align-items: flex-end;
+	gap: 8px;
 }
 
 .modal-title-accent {
@@ -183,6 +184,7 @@
 
 .text-wrap {
 	display: flex;
+	gap: 4px;
 }
 
 .modal-text-weight {
@@ -412,7 +414,7 @@ input::placeholder {
 .modal-btn-wrap {
 	width: 100%;
 	height: 96px;
-	padding: 16px 24px 24px 16px;
+	padding: 16px 24px 16px 24px;
 }
 
 .modal-button {
@@ -450,7 +452,7 @@ input:-webkit-autofill:active {
 	overflow: hidden;
 }
 
-@media screen and (max-width:1023px) {
+@media screen and (max-width: 1023px) {
 	.modal-footer {
 		display: flex;
 		flex-direction: column;
@@ -459,20 +461,55 @@ input:-webkit-autofill:active {
 	}
 
 	.modal-footer-title {
-font-weight: 400;
-font-style: Regular;
-font-size: 18px;
-line-height: 20px;
-text-align: center;
-color: var(--color-accent-text);
+		font-weight: 400;
+		font-style: Regular;
+		font-size: 18px;
+		line-height: 20px;
+		text-align: center;
+		color: var(--color-accent-text);
 	}
 
 	.modal-footer-text {
-font-weight: 400;
-font-style: Regular;
-font-size: 16px;
-line-height: 20px;
-text-align: center;
+		font-weight: 400;
+		font-style: Regular;
+		font-size: 16px;
+		line-height: 20px;
+		text-align: center;
+	}
+}
+@media screen and (min-width: 1024px) {
+	.modal-footer {
+		display: none;
+	}
+	.modal-footer-desk {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		position: absolute;
+		top: calc(50% + 320px); /* половина екрана + висота модалки */
+		left: 50%;
+		transform: translateX(-50%);
 
+		z-index: 100;
+		text-align: center;
+	}
+
+	.modal-footer-desk-title {
+		font-weight: 400;
+		font-style: Regular;
+		font-size: 32px;
+		line-height: 40px;
+		text-align: center;
+		color: var(--color-accent-text);
+	}
+
+	.modal-footer-desk-text {
+		font-weight: 400;
+		font-style: Regular;
+		font-size: 32px;
+		line-height: 40px;
+		text-align: center;
 	}
 }
