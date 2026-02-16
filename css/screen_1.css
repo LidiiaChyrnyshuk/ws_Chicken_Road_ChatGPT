@@ -23,7 +23,7 @@
 .chat-msg,
 .tip {
 	display:block;
-	text-align: center;
+	text-align: left;
 	opacity: 0;
 	transform: translateY(6px);
 	padding: 14px/* 3.58vw */;

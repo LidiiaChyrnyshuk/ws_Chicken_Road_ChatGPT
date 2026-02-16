@@ -29,31 +29,33 @@
 }
 
 .game-container {
-    position: relative;
-    width: 100%;
-    height: 50vh; /* Або фіксовано 645px/430px як раніше */
-    max-width: 390px;
-    overflow: hidden; /* Обов'язково! */
-    
-		background: var(--color-bg);
+	position: relative;
+	width: 100%;
+	height: 570px;
+	max-width: 360px;
+	overflow: hidden;
+	background: var(--color-bg);
 	border-radius: 20px;
 	margin-top: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 19;
 }
 @media screen and (min-width: 1024px) {
 	.game-container {
-		max-width: 760px;
-		height: 425px;
+		max-width: 765px;
+		height: 430px;
 	}
 }
 
-
 .game-iframe {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    border: none;
-		border-radius: 20px;
-    transform-origin: top center;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	border: none;
+	border-radius: 20px;
+	transform-origin: top center;
+	z-index: 20;
 }
 
 /* .game-container {
@@ -97,7 +99,6 @@
 	}
 } */
 
-
 .tips {
 	position: absolute;
 	bottom: 20px;
@@ -120,15 +121,22 @@
 	}
 }
 
-.tip {
+/* .tip {
 	opacity: 0;
 	transform: translateY(8px);
 
 	transition:
 		opacity 0.3s ease,
-		transform 0.3s ease;
+		transform 0.3s ease,
+		filter 0.35s ease;
 
 	will-change: opacity, transform;
+} */
+.tip {
+	opacity: 0;
+	transform: translateY(8px);
+	transition: transform 0.35s cubic-bezier(0.22, 0.61, 0.36, 1);
+	will-change: transform, opacity, filter;
 }
 
 .tip.visible {

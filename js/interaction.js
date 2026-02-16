@@ -17,7 +17,7 @@ const chatEl = document.getElementById("chat");
 const startBtn = document.getElementById("startBtn");
 const gameOverlay = document.getElementById("gameOverlay");
 const tipsEl = document.getElementById("tips");
-const icon = document.getElementById("icon")
+const icon = document.getElementById("icon");
 
 // DATA
 
@@ -124,13 +124,69 @@ function showNextChat() {
 
 document.addEventListener("DOMContentLoaded", showNextChat);
 
-// TIPS FUNCTION 
-function pushTip(text) {
+// TIPS FUNCTION
+function pushTip(text, done) {
 	const tip = document.createElement("div");
 	tip.className = "tip";
 	tipsEl.appendChild(tip);
 
-	typeWriter(tip, text, 30);
+	typeWriter(tip, text, 30, done);
+}
+
+function startTipsSequence(index = 0) {
+	if (index >= tips.length) return;
+
+	pushTip(tips[index], () => {
+		setTimeout(() => {
+			startTipsSequence(index + 1);
+		}, 800);
+	});
+}
+
+// FOLLOW
+
+function updateTipsVisibility() {
+	const game = document.querySelector(".game-container");
+	if (!game) return;
+
+	const gameRect = game.getBoundingClientRect();
+	const tips = tipsEl.querySelectorAll(".tip");
+
+	tips.forEach((tip) => {
+		const tipRect = tip.getBoundingClientRect();
+
+		// наскільки tip зайшов під гру
+		const overlap = gameRect.bottom - tipRect.top;
+
+		if (overlap <= 0) {
+			// ще не під грою
+			tip.style.opacity = "";
+			tip.style.filter = "";
+			return;
+		}
+
+		// зона плавного fade (px)
+		const fadeDistance = 120;
+
+		// прогрес 0 → 1
+		const progress = Math.min(overlap / fadeDistance, 1);
+
+		// плавне розчинення
+		const opacity = 1 - progress * 0.9;
+		const blur = progress * 8;
+
+		tip.style.opacity = opacity;
+		tip.style.filter = `blur(${blur}px)`;
+	});
+}
+
+
+function startTipsObserver() {
+	function loop() {
+		updateTipsVisibility();
+		requestAnimationFrame(loop);
+	}
+	loop();
 }
 
 // GAME START
@@ -141,28 +197,14 @@ startBtn.addEventListener("click", () => {
 
 	setTimeout(() => {
 		scaleGame();
+		startTipsObserver(); 
 	}, 60);
 
-	let tipIndex = 0;
+	startTipsSequence();
 
-	const tipInterval = setInterval(() => {
-		if (tipIndex >= tips.length) {
-			clearInterval(tipInterval);
-			return;
-		}
-
-		pushTip(tips[tipIndex]);
-		tipIndex++;
-	}, 2000);
-
-	// через 15 сек відкриваємо модалку і очищаємо поради
 	setTimeout(() => {
-		clearInterval(tipInterval);
-
-		// видаляємо всі поради
-		const existingTips = tipsEl.querySelectorAll(".tip");
-		existingTips.forEach((el) => el.remove());
-
 		openModal();
-	}, 12000);
+	}, 13500);
 });
+
+
