@@ -121,22 +121,16 @@
 	}
 }
 
-/* .tip {
+.tip {
 	opacity: 0;
 	transform: translateY(8px);
-
+	filter: blur(0);
 	transition:
 		opacity 0.3s ease,
 		transform 0.3s ease,
 		filter 0.35s ease;
 
 	will-change: opacity, transform;
-} */
-.tip {
-	opacity: 0;
-	transform: translateY(8px);
-	transition: transform 0.35s cubic-bezier(0.22, 0.61, 0.36, 1);
-	will-change: transform, opacity, filter;
 }
 
 .tip.visible {
@@ -163,4 +157,8 @@
 }
 .tip span {
 	display: inline;
+}
+.tip.under-game {
+	opacity: 0.05;
+	filter: blur(8px);
 }
