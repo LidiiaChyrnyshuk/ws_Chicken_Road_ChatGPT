@@ -30,7 +30,7 @@
 	width: 100%;
 	max-width: 390px;
 	height: 100vh;
-	max-height: 740px;
+	max-height: 720px;
 	background: var(--color-bg);
 	position: absolute;
 	top: 50%;
@@ -55,8 +55,7 @@
 		max-width: 480px;
 		max-height: 598px;
 		border-radius: 32px;
-		top: 20%;
-		transform: translate(-50%, -20%) scale(1);
+
 	}
 }
 
@@ -454,12 +453,13 @@ input:-webkit-autofill:active {
 	overflow: hidden;
 }
 
-@media screen and (max-width: 1023px) {
 	.modal-footer {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		width: 342px;
+		margin: 0 auto;
 	}
 
 	.modal-footer-title {
@@ -478,7 +478,11 @@ input:-webkit-autofill:active {
 		line-height: 20px;
 		text-align: center;
 	}
-}
+
+		.modal-footer-desk {
+		display: none;
+	}
+
 @media screen and (min-width: 1024px) {
 	.modal-footer {
 		display: none;
@@ -489,8 +493,9 @@ input:-webkit-autofill:active {
 		align-items: center;
 		justify-content: center;
 		width: 100%;
+		max-width: 700px;
 		position: absolute;
-		top: calc(50% + 280px); /* половина екрана + висота модалки */
+		top: calc(50% + 320px); /* половина екрана + висота модалки */
 		left: 50%;
 		transform: translateX(-50%);
 

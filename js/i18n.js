@@ -9,7 +9,8 @@ const i18n = {
 		],
 		start: "Start",
 		tips: [
-			"Now, I’m tracking your playing and volatility patterns in Chicken Road 2 - try it above.",
+			`<span class="tip-light">Now, I’m tracking your playing and volatility patterns in </span><span class="tip-accent">Chicken Road 2</span><span class="tip-bold"> — try it above.</span>`,
+
 			"This crash game is highly momentum-based. Short sessions with controlled bets perform better here.",
 			"Tip: Medium stakes after 2-3 low outcomes usually give the best risk-to-reward ratio.",
 			"If you increase the bet slightly on the next round, the payout curve becomes more favorable…",
@@ -31,7 +32,8 @@ const i18n = {
 		],
 		start: "Commencer",
 		tips: [
-			"Maintenant, je suis en train de suivre tes habitudes de jeu et les schémas de volatilité dans Chicken Road 2 - essaie-le ci-dessus.",
+			`<span class="tip-light">Maintenant, je suis en train de suivre tes habitudes de jeu et les schémas de volatilité dans </span><span class="tip-accent">Chicken Road 2</span><span class="tip-bold"> — essaie-le ci-dessus.</span>`,
+
 			"Ce jeu crash repose fortement sur le momentum. Les sessions courtes avec des mises contrôlées donnent de meilleurs résultats ici.",
 			"Astuce: Des mises moyennes après 2-3 résultats bas offrent généralement le meilleur rapport risque-récompense.",
 			"Si tu augmentes légèrement la mise au prochain tour, la courbe de gains devient plus favorable…",
@@ -44,7 +46,8 @@ const i18n = {
 		modalTextSmall: "plateforme",
 		modalTextWeight: "ChatGPT Gaming",
 		footerTitle: "ChatGPT Gaming peut se tromper.",
-		footerText: "Vérifie les informations importantes. Voir les Préférences de cookies.",
+		footerText:
+			"Vérifie les informations importantes. Voir les Préférences de cookies.",
 	},
 };
 

@@ -22,7 +22,7 @@
 
 .chat-msg,
 .tip {
-	display: block;
+	display:block;
 	text-align: center;
 	opacity: 0;
 	transform: translateY(6px);

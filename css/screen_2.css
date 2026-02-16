@@ -132,3 +132,20 @@
 	opacity: 0;
 	transform: translateY(-8px);
 }
+.tip-light {
+	font-weight: 400;
+	color: var(--color-text);
+}
+
+.tip-accent {
+	font-weight: 700;
+	color:var(--color-accent-text);
+}
+
+.tip-bold {
+	font-weight: 700;
+	color: var(--color-text);
+}
+.tip span {
+	display: inline;
+}

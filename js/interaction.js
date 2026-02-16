@@ -26,7 +26,7 @@ const tips = i18n[LANG].tips;
 
 // TYPEWRITER FUNCTION
 
-function typeWriter(el, text, speed = 35, done) {
+/* function typeWriter(el, text, speed = 35, done) {
 	let i = 0;
 	el.textContent = "";
 
@@ -43,7 +43,56 @@ function typeWriter(el, text, speed = 35, done) {
 	}
 
 	write();
+} */
+function typeWriter(el, html, speed = 35, done) {
+	el.innerHTML = html;
+	el.classList.add("visible");
+
+	const walker = document.createTreeWalker(
+		el,
+		NodeFilter.SHOW_TEXT,
+		null,
+		false,
+	);
+
+	const textNodes = [];
+	let node;
+
+	while ((node = walker.nextNode())) {
+		textNodes.push(node);
+	}
+
+	// очищаємо текст
+	textNodes.forEach((n) => {
+		n._fullText = n.nodeValue;
+		n.nodeValue = "";
+	});
+
+	let nodeIndex = 0;
+	let charIndex = 0;
+
+	function write() {
+		if (nodeIndex >= textNodes.length) {
+			done && done();
+			return;
+		}
+
+		const current = textNodes[nodeIndex];
+		current.nodeValue += current._fullText[charIndex];
+		charIndex++;
+
+		if (charIndex >= current._fullText.length) {
+			nodeIndex++;
+			charIndex = 0;
+		}
+
+		setTimeout(write, speed);
+	}
+
+	write();
 }
+
+
 
 // CHAT SEQUENCE
 
@@ -77,29 +126,13 @@ function showNextChat() {
 
 document.addEventListener("DOMContentLoaded", showNextChat);
 
-// TIPS FUNCTION (MAX 2 VISIBLE)
-
-const MAX_VISIBLE_TIPS = 2;
-const TIP_HEIGHT = 26;
-
+// TIPS FUNCTION 
 function pushTip(text) {
 	const tip = document.createElement("div");
 	tip.className = "tip";
 	tipsEl.appendChild(tip);
 
 	typeWriter(tip, text, 30);
-
-	const tipsList = Array.from(tipsEl.querySelectorAll(".tip"));
-
-	// якщо більше 2 — прибираємо першу
-	if (tipsList.length > MAX_VISIBLE_TIPS) {
-		const first = tipsList[0];
-		first.classList.add("tip-exit");
-
-		setTimeout(() => {
-			first.remove();
-		}, 300);
-	}
 }
 
 // GAME START
