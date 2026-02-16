@@ -33,7 +33,7 @@ window.addEventListener("resize", () => {
 	resizeTimer = setTimeout(scaleGame, 100);
 }); */
 
-export function scaleGame() {
+/* export function scaleGame() {
 	const container = document.querySelector(".game-container");
 	const iframe = document.querySelector(".game-iframe");
 
@@ -54,4 +54,35 @@ export function scaleGame() {
 }
 
 window.addEventListener("resize", scaleGame);
-window.addEventListener("load", scaleGame);
+window.addEventListener("load", scaleGame); */
+export function scaleGame() {
+	const container = document.querySelector(".game-container");
+	const iframe = document.querySelector(".game-iframe");
+	if (!container || !iframe) return;
+
+	const isDesktop = window.innerWidth >= 1024;
+
+	// 1. Встановлюємо "Віртуальну роздільну здатність"
+	// Якщо гра на сайті розрахована на великий екран, ставимо 1920
+	const gameFullWidth = isDesktop ? 1920 : 500;
+	const gameFullHeight = isDesktop ? 1080 : 800;
+
+	// Примусово робимо фрейм величезним, щоб гра всередині розгорнулася без скролів
+	iframe.style.width = `${gameFullWidth}px`;
+	iframe.style.height = `${gameFullHeight}px`;
+
+	// 2. Рахуємо, у скільки разів треба стиснути цей гігантський фрейм,
+	// щоб він вліз у ваш маленький .game-container
+	const scale = Math.min(
+		container.clientWidth / gameFullWidth,
+		container.clientHeight / gameFullHeight,
+	);
+
+	// 3. Стискаємо фрейм
+	iframe.style.transform = `translateX(-50%) scale(${scale})`;
+}
+
+// Додаємо виклик при зміні розміру вікна
+window.addEventListener("resize", scaleGame);
+// Викликаємо один раз відразу
+scaleGame();

@@ -92,8 +92,6 @@ function typeWriter(el, html, speed = 35, done) {
 	write();
 }
 
-
-
 // CHAT SEQUENCE
 
 let chatIndex = 0;
