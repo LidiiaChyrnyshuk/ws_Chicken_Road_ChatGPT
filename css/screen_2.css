@@ -10,9 +10,10 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	
 	padding-top: 40px;
-	padding-left: /* 16px */ 4.1vw;
-	padding-right: /* 16px */ 4.1vw;
+/* 	padding-left:16px;
+	padding-right: 16px; */
 	overflow: hidden;
 }
 @media screen and (min-width: 1024px) {
@@ -30,9 +31,8 @@
 
 .game-container {
 	position: relative;
-	width: 100%;
-	max-width: 390px;
-	height: 645px;
+	width: 390px;
+	height: 480px;
 	background: var(--color-bg);
 	border-radius: 20px;
 	margin-top: 30px;
@@ -46,7 +46,7 @@
 }
 @media screen and (min-width: 1024px) {
 	.game-container {
-		max-width: 765px;
+		width: 765px;
 		height: 430px;
 	}
 }
@@ -56,7 +56,7 @@
 	top: 0;
 	left: 50%;
 	width: 390px;
-	height: 645px;
+	height: 500px;
 	border: none;
 	border-radius: 20px;
 	transform-origin: top center;
@@ -81,11 +81,14 @@
 	max-width: 390px;
 	display: flex;
 	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 	gap: 4px;
 	z-index: 10;
 	pointer-events: none;
-	padding-left: /* 16px */ 4.1vw;
-	padding-right: /* 16px */ 4.1vw;
+	padding-right: 4.1vw;
+		padding-left:16px;
+	padding-right: 16px;
 }
 @media screen and (min-width: 1024px) {
 	.tips {
