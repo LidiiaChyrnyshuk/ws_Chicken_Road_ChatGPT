@@ -36,8 +36,8 @@ export function scaleGame() {
 		gameFullHeight = 1080;
 	}  else {
 		
-		gameFullWidth = 500;
-		gameFullHeight = 800;
+		gameFullWidth = 450;
+		gameFullHeight = 750;
 	}
 
 	iframe.style.width = `${gameFullWidth}px`;

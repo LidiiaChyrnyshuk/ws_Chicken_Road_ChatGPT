@@ -1,5 +1,5 @@
 .accent-coins {
-  width: 115%;
+	width: 115%;
 }
 .top-left-mob {
 	position: absolute;
@@ -7,6 +7,8 @@
 	left: -20px;
 	width: 113px;
 	height: 106px;
+	animation: floatPerspective 3s ease-in-out infinite;
+	transform-style: preserve-3d;
 }
 
 .centr-left-mob {
@@ -31,6 +33,8 @@
 	right: 60px;
 	width: 71px;
 	height: 86px;
+	animation: floatPerspective 3s ease-in-out infinite;
+	transform-style: preserve-3d;
 }
 
 @media screen and (min-width: 1024px) {
@@ -48,5 +52,186 @@
 
 	.bottom-right-mob {
 		display: none;
+	}
+}
+/* --screen2-------- */
+
+.overlay-top-left-mob {
+	position: absolute;
+	top: 20px;
+	left: -20px;
+	width: 113px;
+	height: 106px;
+	animation: floatPerspective 3s ease-in-out infinite;
+	transform-style: preserve-3d;
+}
+
+.overlay-centr-left-mob {
+	position: absolute;
+	top: 173px;
+	left: -13px;
+	width: 84px;
+	height: 68px;
+}
+
+.overlay-centr-right-mob {
+	position: absolute;
+	top: 80%;
+	right: -13px;
+	width: 132px;
+	height: 122px;
+}
+
+.overlay-bottom-right-mob {
+	position: absolute;
+	top: 90%;
+	right: 70px;
+	width: 71px;
+	height: 86px;
+	animation: floatPerspective 3s ease-in-out infinite;
+	transform-style: preserve-3d;
+}
+
+.top-right-desk {
+	display: none;
+}
+
+.center-right-desk {
+	display: none;
+}
+
+.center-left-desk {
+	display: none;
+}
+
+.bottom-left-desk {
+	display: none;
+}
+
+.overlay-top-right-desk {
+	display: none;
+}
+
+.overlay-center-right-desk {
+	display: none;
+}
+
+.overlay-center-left-desk {
+	display: none;
+}
+
+.overlay-bottom-left-desk {
+	display: none;
+}
+
+@media screen and (min-width: 1024px) {
+	.overlay-top-left-mob {
+		display: none;
+	}
+
+	.overlay-centr-left-mob {
+		display: none;
+	}
+
+	.overlay-centr-right-mob {
+		display: none;
+	}
+
+	.overlay-bottom-right-mob {
+		display: none;
+	}
+
+	.top-right-desk {
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 8.57vw;
+		width: 220px;
+		height: 206px;
+		animation: floatPerspective 3s ease-in-out infinite;
+		transform-style: preserve-3d;
+	}
+
+	.center-right-desk {
+		display: block;
+		position: absolute;
+		top: 14.98vw;
+		right: 6.06vw;
+		width: 166px;
+		height: 130px;
+	}
+
+	.center-left-desk {
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: -5vw;
+		width: 303px;
+		height: 280px;
+	}
+
+	.bottom-left-desk {
+		display: block;
+		position: absolute;
+		top: 80%;
+		left: 7.53vw;
+		width: 161px;
+		height: 207px;
+		animation: floatPerspective 3s ease-in-out infinite;
+		transform-style: preserve-3d;
+	}
+	/* -----------screen2----------- */
+	.overlay-top-right-desk {
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 14.57vw;
+		width: 220px;
+		height: 206px;
+		animation: floatPerspective 3s ease-in-out infinite;
+		transform-style: preserve-3d;
+	}
+
+	.overlay-center-right-desk {
+		display: block;
+		position: absolute;
+		top: 14.98vw;
+		right: 4.06vw;
+		width: 166px;
+		height: 130px;
+	}
+
+	.overlay-center-left-desk {
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: -5vw;
+		width: 303px;
+		height: 280px;
+	}
+
+	.overlay-bottom-left-desk {
+		display: block;
+		position: absolute;
+		top: 80%;
+		left: 7.53vw;
+		width: 161px;
+		height: 207px;
+		animation: floatPerspective 3s ease-in-out infinite;
+		transform-style: preserve-3d;
+	}
+}
+
+@keyframes floatPerspective {
+	0% {
+		transform: translateY(0) translateZ(0) rotateX(0deg) rotateY(0deg);
+	}
+
+	50% {
+		transform: translateY(-20px) translateZ(40px) rotateX(8deg) rotateY(-8deg);
+	}
+
+	100% {
+		transform: translateY(0) translateZ(0) rotateX(0deg) rotateY(0deg);
 	}
 }

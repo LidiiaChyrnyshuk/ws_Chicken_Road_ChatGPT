@@ -26,7 +26,6 @@ const tips = i18n[LANG].tips;
 
 // TYPEWRITER FUNCTION
 
-// /* function typeWriter(el, text, speed = 35, done) { let i = 0; el.textContent = ""; function write() { if (i === 0) el.classList.add("visible"); if (i < text.length) { el.textContent += text[i]; i++; setTimeout(write, speed); } else if (done) { done(); } } write(); } */
 function typeWriter(el, html, speed = 35, done) {
 	el.innerHTML = html;
 	el.classList.add("visible");
