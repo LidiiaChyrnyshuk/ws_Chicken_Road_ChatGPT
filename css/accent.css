@@ -68,7 +68,7 @@
 
 .overlay-centr-left-mob {
 	position: absolute;
-	top: 173px;
+	top: 163px;
 	left: -13px;
 	width: 84px;
 	height: 68px;
@@ -85,7 +85,7 @@
 .overlay-bottom-right-mob {
 	position: absolute;
 	top: 90%;
-	right: 70px;
+	right: 90px;
 	width: 71px;
 	height: 86px;
 	animation: floatPerspective 3s ease-in-out infinite;

@@ -1,27 +1,4 @@
 
-/* export function scaleGame() {
-	const container = document.querySelector(".game-container");
-	const iframe = document.querySelector(".game-iframe");
-
-	if (!container || !iframe) return;
-
-	const isDesktop = window.innerWidth >= 1024;
-
-	const baseWidth = isDesktop ? 1200 : 390;
-	const baseHeight = isDesktop ? 430 : 645;
-
-	const scaleX = container.clientWidth / baseWidth;
-	const scaleY = container.clientHeight / baseHeight;
-
-	const scale = Math.min(scaleX, scaleY);
-
-
-	iframe.style.transform = `translateX(-50%) scale(${scale})`;
-}
-
-window.addEventListener("resize", scaleGame);
-window.addEventListener("load", scaleGame); */
-
 export function scaleGame() {
 	const container = document.querySelector(".game-container");
 	const iframe = document.querySelector(".game-iframe");
@@ -53,5 +30,3 @@ export function scaleGame() {
 
 window.addEventListener("resize", scaleGame);
 scaleGame();
-
-
