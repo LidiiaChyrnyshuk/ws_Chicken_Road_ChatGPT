@@ -493,8 +493,8 @@ async function submitForm(e) {
 function setupEvents() {
 	refs.openBtns.forEach((btn) => btn.addEventListener("click", openModal));
 	/* refs.closeBtn.addEventListener("click", closeModal); */
-	document.addEventListener("keydown", handleEscClose);
-	document.addEventListener("click", handleEscClose);
+/* 	document.addEventListener("keydown", handleEscClose);
+	document.addEventListener("click", handleEscClose); */
 	refs.email.addEventListener("blur", validateEmailOnBlur);
 	refs.email.addEventListener("input", validateEmailOnInput);
 	refs.password.addEventListener("input", validateForm);
