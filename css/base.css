@@ -45,7 +45,7 @@ body {
 }
 @media screen and (min-width: 1024px) {
 	.container {
-		padding-top: 80px;
+	/* 	padding-top: 80px; */
 		padding-right: /* 156px */ 10.31vw;
 		padding-left: /* 156px */ 10.31vw;
 	}
@@ -76,10 +76,10 @@ body {
 	height: /* 46px */11.79vw;
 	max-height: 64px;
 }
-/* @media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
 	.header-logo {
 		width: 322px;
 		height: 64px;
 		margin-bottom: 40px;
 	}
-} */
+}

@@ -92,14 +92,14 @@ function pushTip(text, done) {
 	const tip = document.createElement("div");
 	tip.className = "tip";
 	tipsEl.appendChild(tip);
-	typeWriter(tip, text, 30, done);
+	typeWriter(tip, text, 40, done);
 }
 function startTipsSequence(index = 0) {
 	if (index >= tips.length) return;
 	pushTip(tips[index], () => {
 		setTimeout(() => {
 			startTipsSequence(index + 1);
-		}, 800);
+		}, 900);
 	});
 }
 

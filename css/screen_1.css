@@ -53,7 +53,7 @@
 .tip {
 	text-align: left;
 	padding: 28px 35px 28px 35px;
-	margin-bottom: 24px;
+	/* margin-bottom: 24px; */
 	font-size: 24px;
 	border-radius: 65px;
 }
