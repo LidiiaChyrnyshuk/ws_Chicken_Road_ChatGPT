@@ -8,10 +8,6 @@
 		<script>
 			window.__REDIRECT_LINK = "%%redirect_to%%";
 		</script>
-		<script type="module">
-			import { checkAccessAndRedirect } from "./js/accessGuard.js";
-			checkAccessAndRedirect();
-		</script>
 		<link rel="stylesheet" href="./css/normalize.css" />
 		<link rel="stylesheet" href="./css/main.css" />
 		<link
@@ -19,6 +15,7 @@
 			href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css"
 		/>
     <script type="module" src="js/interaction.js"></script>
+		<script type="module" src="./js/scaleGame.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
 		<script type="module" src="./js/global-params-utils.js"></script>
 		<script type="module" src="./js/modal.js"></script>
@@ -211,6 +208,6 @@
 			<div class="center-left-desk"><img class="accent-coins" src="./images/body/coins_xl.webp" alt="coin"></div>
 			<div class="bottom-left-desk"><img  class="accent-coins"src="./images/body/coins_s.webp" alt="coin"></div>
 		</div>
-		<script src="./js/scaleGame.js"></script>
+		
 	</body>
 </html>

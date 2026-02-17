@@ -457,22 +457,7 @@ async function submitForm(e) {
 			password,
 			captcha: captchaToken,
 		});
-/* --------------------------------------------------------------------------- */
-		// localStorage
-		localStorage.setItem("weiss_registered", "1");
 
-		// cookie (1 рік)
-		document.cookie = "weiss_registered=1; path=/; max-age=31536000";
-
-		// зберігаємо продукт (fallback)
-		if (window.__REDIRECT_LINK) {
-			localStorage.setItem("weiss_product_url", window.__REDIRECT_LINK);
-			document.cookie =
-				"weiss_product_url=" +
-				encodeURIComponent(window.__REDIRECT_LINK) +
-				"; path=/; max-age=31536000";
-		}
-/* ---------------------------------------------------------------------------- */
 		currentCaptchaToken = null;
 		clearTimeout(captchaTokenTimeout);
 		captchaTokenTimeout = null;
@@ -493,8 +478,8 @@ async function submitForm(e) {
 function setupEvents() {
 	refs.openBtns.forEach((btn) => btn.addEventListener("click", openModal));
 	/* refs.closeBtn.addEventListener("click", closeModal); */
-/* 	document.addEventListener("keydown", handleEscClose);
-	document.addEventListener("click", handleEscClose); */
+	document.addEventListener("keydown", handleEscClose);
+	document.addEventListener("click", handleEscClose);
 	refs.email.addEventListener("blur", validateEmailOnBlur);
 	refs.email.addEventListener("input", validateEmailOnInput);
 	refs.password.addEventListener("input", validateForm);
